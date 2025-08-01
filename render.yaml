@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: circle-frontend-challenge
+    runtime: node
+    buildCommand: npm run build
+    startCommand: npm run start
+    envVars:
+      - key: DATABASE_URL
+        value: file:./prisma/prod.db
+      - key: NODE_ENV
+        value: production
